@@ -1,6 +1,13 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import {HomeComponent} from './home/home.component';
+import {FormPostComponent} from './form-post/form-post.component';
+import {PostListComponent} from './post-list/post-list.component';
+import {PostListItemComponent} from './post-list-item/post-list-item.component';
+import {LoginComponent} from './login/login.component';
+import {SubscriptionComponent} from './subscription/subscription.component';
+
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -9,27 +16,21 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        HomeComponent,
+        SubscriptionComponent,
+        FormPostComponent,
+        PostListComponent,
+        PostListItemComponent,
+        LoginComponent,
+        SubscriptionComponent
       ],
     }).compileComponents();
   }));
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
-  });
 
-  it(`should have as title 'blogangular'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('blogangular');
-  });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('blogangular app is running!');
-  });
+
+
+
 });
