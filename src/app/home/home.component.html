@@ -1,0 +1,8 @@
+<section ><app-form-post (messageEmitter)="onSendMessage()"></app-form-post></section>
+
+<!--<a [routerLink]="['blog/add']">Ajouter un post</a><br/>-->
+
+<div>
+
+  <section> <app-post-list [posts]="posts" (messageEmitterDelete)="onSendMessage()"></app-post-list></section>
+ </div>
