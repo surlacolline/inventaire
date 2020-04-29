@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FormPostComponent } from './form-post/form-post.component';
-import { PostListItemComponent } from './post-list-item/post-list-item.component';
+import { FormPostComponent } from './formulaire/form-post/form-post.component';
+import { ObjectItemComponent } from './Gestion objets/item-item/item-list-item.component';
 import { AuthGuard } from './core/auth.guard';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { LoginComponent } from './login/login.component';
@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'blog/:id',
-    component: PostListItemComponent
+    component: ObjectItemComponent
   },
   {
     path: 'subscribe',

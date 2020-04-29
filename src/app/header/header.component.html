@@ -1,7 +1,9 @@
-<nav class="navbar cyan lighten-3" >
-  <a [routerLink]="['']"><h1>Mon blog perso</h1></a>
+<nav class="navbar cyan lighten-3 navbar-light " >
+  <a [routerLink]="['']"><h1>Mon inventaire</h1></a>
   <a [routerLink]="['/subscribe']" [hidden] = 'connected' >Inscription</a>
 <a [routerLink]="['/login']" [hidden] = 'connected'>Connexion</a>
 <a (click)="logout()" [hidden] = '!connected' href="">Deconnexion</a>
+
+
 </nav>
 

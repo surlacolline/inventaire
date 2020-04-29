@@ -6,19 +6,19 @@ import {
   HttpClientModule
 } from "@angular/common/http";
 
-import { PostService } from "./post.service";
-import { Post } from "../shared/model/post.model";
+import { ObjectService } from "./object.service";
+import { Item } from "../shared/model/item.model";
 
 describe("PostService", () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [],
       imports: [HttpClientModule],
-      providers: [PostService, HttpClient]
+      providers: [ObjectService, HttpClient]
     });
   });
 
-  it("should be created", inject([PostService], (service: PostService) => {
+  it("should be created", inject([ObjectService], (service: ObjectService) => {
     expect(service).toBeTruthy();
   }));
 

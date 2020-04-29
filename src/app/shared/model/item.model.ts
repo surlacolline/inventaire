@@ -1,9 +1,11 @@
-export class Post {
+export class Item {
   id: number;
   title: string;
   content: string;
-  loveIts: number;
+  quantity?: number;
   createdAt?: Date;
+  category?: string[];
+  label?: string[];
   constructor() {
 
   }

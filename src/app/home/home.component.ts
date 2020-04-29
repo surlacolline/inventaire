@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from '../shared/model/post.model';
+import { Item } from '../shared/model/item.model';
 import { Subscription } from 'rxjs';
-import { PostService } from '../service/post.service';
+import { ObjectService } from '../service/object.service';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { ObjectMockService } from '../service/object-mock.service';
 
 @Component({
   selector: 'app-home',
@@ -12,9 +13,9 @@ import { environment } from 'src/environments/environment';
 })
 export class HomeComponent implements OnInit {
 
-  private posts: Post[];
+  private objects: Item[];
   private subscription: Subscription;
-  constructor(private postService: PostService, private http : HttpClient) {}
+  constructor(private postService: ObjectService, private objectMockService: ObjectMockService, private http : HttpClient) {}
 
   private readonly GET_LOGOUT = environment.apiURL + 'user/logout';
 
@@ -29,11 +30,12 @@ export class HomeComponent implements OnInit {
   }
   getPosts(): void {
     this.subscription = this.postService.getallPosts().subscribe(
-      (data: Array<Post>) => {
-        this.posts = data;
-      },
-      err => console.log(err)
+      (data: Array<Item>)  => {
+        this.objects = data;
+    },
+    err => console.log(err)
     );
+
   }
 
 }

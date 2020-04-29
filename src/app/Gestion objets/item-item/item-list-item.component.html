@@ -5,7 +5,7 @@
 <div class = "row">
 
   <div class="col-md-11">
-      <h3>{{ post.title}} </h3>
+      <h3>{{ object.title}} </h3>
       </div>
       <div class="col-md-1">
       <i (click) = "AllowEditPost()" class="material-icons droite">edit</i>
@@ -13,8 +13,8 @@
       </div>
 
     </div>
-      <p class = "date"> {{post.createdAt | date  }}</p>
-      <p> {{post.content }}</p>
+      <p class = "date"> {{object.createdAt | date  }}</p>
+      <p> {{object.content }}</p>
       <!--<a [routerLink]="['blog/', 2030]">Details</a>-->
       <button  class="btn" (click) = "lovePost()" >Love it!</button>
       <button  class="btn red" (click) = "dontLovePost()" >Don't love it...</button>
@@ -25,7 +25,7 @@
     <button  class="btn" (click) = "SaveEditPost()" >Enregistrer</button>
     <button  class="btn red" (click) = "CancelEditPost()" >Annuler</button>
       <input type="text" required class = "validate" formControlName ="title"/>
-      <p class = "date"> {{post.createdAt | date  }}</p>
+      <p class = "date"> {{object.createdAt | date  }}</p>
       <input type="text" required class = "validate" formControlName ="content" />
     </form>
   </div>

@@ -1,0 +1,1 @@
+C:\Users\Elise\Documents\PROJET\Inventaire\inventaire>$ json-server --watch data.json --port 4000

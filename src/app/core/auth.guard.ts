@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+// tslint:disable-next-line: max-line-length
 import { CanActivate, CanActivateChild, CanLoad, Route, UrlSegment, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 

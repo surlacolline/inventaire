@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PostListItemComponent } from "./post-list-item.component";
+import { ObjectItemComponent } from "./item-list-item.component";
 import {
   Component,
   OnInit,
@@ -10,8 +10,8 @@ import {
   EventEmitter
 } from "@angular/core";
 import { inject } from "@angular/core/testing";
-import { Post } from "../shared/model/post.model";
-import { PostService } from "../service/post.service";
+import { Item } from "../../shared/model/item.model";
+import { ObjectService } from "../../service/object.service";
 import { Subscription, of } from "rxjs";
 import {
   FormGroup,
@@ -24,15 +24,15 @@ import { ActivatedRoute, RouterModule } from "@angular/router";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 
 describe("PostListItemComponent", () => {
-  let component: PostListItemComponent;
-  let fixture: ComponentFixture<PostListItemComponent>;
+  let component: ObjectItemComponent;
+  let fixture: ComponentFixture<ObjectItemComponent>;
   const route = ({ data: of({ label: "hello" }) } as any) as ActivatedRoute;
-  const post: Post = new Post();
+  const post: Item = new Item();
   post.title = "bla";
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [PostListItemComponent],
+      declarations: [ObjectItemComponent],
       imports: [
         FormsModule,
         ReactiveFormsModule,
@@ -41,7 +41,7 @@ describe("PostListItemComponent", () => {
       ],
       providers: [
         FormBuilder,
-        PostService,
+        ObjectService,
         { provide: ActivatedRoute, useValue: route },
         HttpClient
       ]
@@ -49,7 +49,7 @@ describe("PostListItemComponent", () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PostListItemComponent);
+    fixture = TestBed.createComponent(ObjectItemComponent);
     component = fixture.componentInstance;
     component.post = post;
     fixture.detectChanges();

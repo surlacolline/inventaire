@@ -2,11 +2,11 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { PostService } from '../service/post.service';
-import { FormPostComponent } from '../form-post/form-post.component';
-import { PostListComponent } from '../post-list/post-list.component';
+import { ObjectService } from '../service/object.service';
+import { FormPostComponent } from '../formulaire/form-post/form-post.component';
+import { ObjectListComponent } from '../Gestion objets/item-list/item-list.component';
 import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
-import { Post } from '../shared/model/post.model';
+import { Item } from '../shared/model/item.model';
 import { AppModule } from '../app.module';
 import { Component } from '@angular/core';
 
@@ -20,7 +20,7 @@ describe('HomeComponent', () => {
   }
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent, FormPostComponent, PostListComponent ],
+      declarations: [ HomeComponent, FormPostComponent, ObjectListComponent ],
       imports: [
         HttpClientModule,
         FormsModule,
@@ -28,9 +28,9 @@ describe('HomeComponent', () => {
       ],
       providers: [
         FormBuilder,
-        PostService,
+        ObjectService,
         HttpClient,
-        Post
+        Item
       ]
     })
     .compileComponents();

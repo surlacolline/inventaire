@@ -1,0 +1,8 @@
+
+<h2>Mes anciens articles</h2>
+<div class="">
+  <div class="" *ngFor="let object of objects" >
+    <app-post-list-item [object] = "object" (messageEmitterDelete)="onSendMessage()"></app-post-list-item>
+
+  </div>
+</div>

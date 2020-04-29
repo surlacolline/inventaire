@@ -2,9 +2,9 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import {HomeComponent} from './home/home.component';
-import {FormPostComponent} from './form-post/form-post.component';
-import {PostListComponent} from './post-list/post-list.component';
-import {PostListItemComponent} from './post-list-item/post-list-item.component';
+import {FormPostComponent} from './formulaire/form-post/form-post.component';
+import {ObjectListComponent} from './Gestion objets/item-list/item-list.component';
+import {ObjectItemComponent} from './Gestion objets/item-item/item-list-item.component';
 import {LoginComponent} from './login/login.component';
 import {SubscriptionComponent} from './subscription/subscription.component';
 
@@ -20,8 +20,8 @@ describe('AppComponent', () => {
         HomeComponent,
         SubscriptionComponent,
         FormPostComponent,
-        PostListComponent,
-        PostListItemComponent,
+        ObjectListComponent,
+        ObjectItemComponent,
         LoginComponent,
         SubscriptionComponent
       ],

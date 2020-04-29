@@ -1,15 +1,15 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import {Post} from '../shared/model/post.model';
+import {Item as Item} from '../../shared/model/item.model';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-post-list',
-  templateUrl: './post-list.component.html',
-  styleUrls: ['./post-list.component.scss']
+  templateUrl: './item-list.component.html',
+  styleUrls: ['./item-list.component.scss']
 })
-export class PostListComponent implements OnInit {
+export class ObjectListComponent implements OnInit {
   @Input()
-  posts: Post[];
+  objects: Item[];
 
   @Output()
   messageEmitterDelete: EventEmitter<void> = new EventEmitter<void>();
