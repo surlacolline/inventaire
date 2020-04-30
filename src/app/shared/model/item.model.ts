@@ -4,7 +4,7 @@ export class Item {
   content: string;
   quantity?: number;
   createdAt?: Date;
-  category?: string[];
+  category?: string;
   label?: string[];
   constructor() {
 

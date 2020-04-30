@@ -14,10 +14,11 @@
 
     </div>
       <p class = "date"> {{object.createdAt | date  }}</p>
+      <p> {{object.category }}</p>
       <p> {{object.content }}</p>
       <!--<a [routerLink]="['blog/', 2030]">Details</a>-->
-      <button  class="btn" (click) = "lovePost()" >Love it!</button>
-      <button  class="btn red" (click) = "dontLovePost()" >Don't love it...</button>
+      <!-- <button  class="btn" (click) = "lovePost()" >Love it!</button>
+      <button  class="btn red" (click) = "dontLovePost()" >Don't love it...</button> -->
   </div>
 
   <div *ngIf="!readMode"  [ngClass]="lovedPost + ' postbox'">

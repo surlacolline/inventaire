@@ -70,6 +70,7 @@ public  listCategory = ['Habits', 'CDs'];
       id: undefined,
       title: newPost.title,
       content: newPost.content,
+      category: newPost.category,
       quantity: 1,
       createdAt: new Date()
     };
