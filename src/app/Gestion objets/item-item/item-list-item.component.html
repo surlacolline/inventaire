@@ -1,27 +1,23 @@
-<div class = "row ">
-<hr>
-<div class="col">
-    <div *ngIf="readMode"  [ngClass]="lovedPost + ' postbox'">
-<div class = "row">
 
-  <div class="col-md-11">
-      <h3>{{ object.title}} </h3>
+
+    <div *ngIf="readMode"  [ngClass]="' postbox'">
+
+  <div class="">
+      <h3>{{ object.title}} &nbsp;&nbsp;&nbsp;
+        <i (click) = "AllowEditPost()" class="material-icons droite">edit</i>
+        <i (click) = "DeletePost()"  class="material-icons droite">delete</i> </h3>
       </div>
-      <div class="col-md-1">
-      <i (click) = "AllowEditPost()" class="material-icons droite">edit</i>
-      <i (click) = "DeletePost()"  class="material-icons droite">delete</i>
-      </div>
+
 
     </div>
       <p class = "date"> {{object.createdAt | date  }}</p>
-      <p> {{object.category }}</p>
+      <p> {{object.category || "Sans catégorie" }}</p>
       <p> {{object.content }}</p>
       <!--<a [routerLink]="['blog/', 2030]">Details</a>-->
       <!-- <button  class="btn" (click) = "lovePost()" >Love it!</button>
       <button  class="btn red" (click) = "dontLovePost()" >Don't love it...</button> -->
-  </div>
 
-  <div *ngIf="!readMode"  [ngClass]="lovedPost + ' postbox'">
+  <div *ngIf="!readMode"  [ngClass]=" ' postbox'">
     <form [formGroup] = "editPost" >
     <button  class="btn" (click) = "SaveEditPost()" >Enregistrer</button>
     <button  class="btn red" (click) = "CancelEditPost()" >Annuler</button>
@@ -31,4 +27,3 @@
     </form>
   </div>
 
-</div>

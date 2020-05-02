@@ -18,15 +18,13 @@ export class ObjectItemComponent implements OnInit, OnDestroy {
 
   @Output()
   messageEmitterDelete: EventEmitter<void> = new EventEmitter<void>();
+  subscription: Subscription = new Subscription();
+  readMode: boolean = true;
+  public editPost: FormGroup;
 
- sendMessageDelete() {
+  sendMessageDelete() {
    this.messageEmitterDelete.emit();
  }
-
-  readMode: Boolean = true;
-  private editPost: FormGroup;
-
-  subscription: Subscription = new Subscription();
 
 
 
@@ -34,9 +32,9 @@ export class ObjectItemComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.createform();
-    //this.activatedRoute.params.subscribe(data =>
-      //this.postService.getPost(data['id'])
-      //.subscribe(parampost => this.post = parampost));
+    // this.activatedRoute.params.subscribe(data =>
+      // this.postService.getPost(data['id'])
+      // .subscribe(parampost => this.post = parampost));
 
   }
 

@@ -19,7 +19,7 @@ import {
 import { EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-form-post',
+  selector: '[app-form-post]',
   templateUrl: './form-post.component.html',
   styleUrls: ['./form-post.component.scss'],
   animations: [

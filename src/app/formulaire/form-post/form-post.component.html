@@ -13,12 +13,13 @@
 
     <div class="input-field">
       <select  formControlName="category">
+        <option value="" disabled selected>Catégorie*</option>
         <option *ngFor="let item of listCategory" [value]="item">
           {{ item }}
         </option>
       </select>
 
-      <label for="content">Catégorie*</label>
+      <!-- <label for="category">Catégorie*</label> -->
     </div>
     <br />
 
@@ -28,7 +29,7 @@
       type="submit"
       [disabled]="addNewItem.invalid"
     >
-      Ajouter contact
+      Ajouter un objet
     </button>
   </form>
 </div>
