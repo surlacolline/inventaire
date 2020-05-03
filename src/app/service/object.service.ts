@@ -10,6 +10,7 @@ import { HttpClient, HttpParams } from "@angular/common/http";
 })
 export class ObjectService {
   private readonly GET_POSTS = environment.apiURL + "blog";
+  private readonly GET_CAT = environment.apiURL + "blog/cat";
   private readonly POST_POST = environment.apiURL + "blog";
 
   private readonly PUT_POST = (postId: number) => `${environment.apiURL}blog/${postId}/edit`;
@@ -42,6 +43,10 @@ export class ObjectService {
 
   getallPosts(): Observable<Item[]> {
     return this.http.get<Item[]>(this.GET_POSTS);
+  }
+
+  getallCategories(): Observable<string[]> {
+    return this.http.get<string[]>(this.GET_CAT);
   }
 
   getPost(id: number) {

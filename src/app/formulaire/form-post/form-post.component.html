@@ -12,12 +12,14 @@
     </div>
 
     <div class="input-field">
-      <select  formControlName="category">
+      <input list="category" type="text" required class="validate" formControlName="category" placeholder="Catégorie"/>
+      <datalist id="category"  >
         <option value="" disabled selected>Catégorie*</option>
         <option *ngFor="let item of listCategory" [value]="item">
-          {{ item }}
+          {{ item || "Sans catégorie"}}
         </option>
-      </select>
+
+      </datalist>
 
       <!-- <label for="category">Catégorie*</label> -->
     </div>
