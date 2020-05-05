@@ -14,14 +14,15 @@ import { ObjectMockService } from '../service/object-mock.service';
 export class HomeComponent implements OnInit {
 
   private objects: Item[];
-  private subscription: Subscription;
+  private subscription: Subscription = new Subscription();
   constructor(private postService: ObjectService, private objectMockService: ObjectMockService, private http : HttpClient) {}
 
   private readonly GET_LOGOUT = environment.apiURL + 'user/logout';
 
-
+  public listCategory: string[] = [];
 
   ngOnInit() {
+    this.getCategories();
     this.getPosts();
   }
 
@@ -29,13 +30,23 @@ export class HomeComponent implements OnInit {
     this.getPosts();
   }
   getPosts(): void {
-    this.subscription = this.postService.getallPosts().subscribe(
+    this.subscription.add(this.postService.getallPosts().subscribe(
       (data: Array<Item>)  => {
         this.objects = data;
     },
     err => console.log(err)
-    );
+    ));
 
+  }
+
+  getCategories(): void {
+    this.subscription.add( this.postService.getallCategories().subscribe(
+      (data: Array<string>) => {
+        //this.listCategory = data;
+        this.listCategory = ["data","pouet"];
+      },
+      (err) => console.log(err)
+    ));
   }
 
 }

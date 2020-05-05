@@ -38,6 +38,9 @@ import { EventEmitter } from "@angular/core";
   ],
 })
 export class FormPostComponent implements OnInit, OnDestroy {
+  @Input()
+  categories: string[];
+
   @Output()
   messageEmitter: EventEmitter<void> = new EventEmitter<void>();
 
@@ -87,6 +90,7 @@ export class FormPostComponent implements OnInit, OnDestroy {
       () => {
         this.sendMessage();
         this.rebuildForm();
+        this.getCategories();
       },
       (e) => console.log(e),
       () => console.log("complete")

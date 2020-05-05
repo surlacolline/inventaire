@@ -1,29 +1,45 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import {Item as Item} from '../../shared/model/item.model';
-import { Observable } from 'rxjs';
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  OnChanges,
+} from "@angular/core";
+
+import { Item } from "../../shared/model/item.model";
+import { Observable } from "rxjs";
 
 @Component({
-  selector: 'app-post-list',
-  templateUrl: './item-list.component.html',
-  styleUrls: ['./item-list.component.scss']
+  selector: "app-post-list",
+  templateUrl: "./item-list.component.html",
+  styleUrls: ["./item-list.component.scss"],
 })
 export class ObjectListComponent implements OnInit {
   @Input()
   objects: Item[];
+  //@Input()
+  //categories: string[];
 
   @Output()
   messageEmitterDelete: EventEmitter<void> = new EventEmitter<void>();
 
- sendMessage(){
-   this.messageEmitterDelete.emit();
- }
+  public categories:string[]
 
-  constructor() { }
 
-  ngOnInit(){
+  sendMessage() {
+    this.messageEmitterDelete.emit();
   }
 
-  onSendMessage(){
+  constructor() {}
+
+
+  ngOnInit() {
+this.categories = this.objects.map(x => x.category);
+
+  }
+
+  onSendMessage() {
     this.sendMessage();
   }
 }

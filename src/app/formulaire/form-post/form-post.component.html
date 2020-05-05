@@ -2,20 +2,20 @@
 <div class="row">
   <form class="col s12" [formGroup]="addNewItem" (ngSubmit)="onSubmit()">
     <div class="input-field">
-      <input type="text" required class="validate" formControlName="title" />
+      <input type="text"  class="validate" formControlName="title" />
       <label for="title">Titre*</label>
     </div>
 
     <div class="input-field">
-      <input type="text" required class="validate" formControlName="content" />
+      <input type="text"  class="validate" formControlName="content" />
       <label for="content">Contenu*</label>
     </div>
 
     <div class="input-field">
-      <input list="category" type="text" required class="validate" formControlName="category" placeholder="Catégorie"/>
+      <input list="category" type="text"  class="validate" formControlName="category" placeholder="Catégorie"/>
       <datalist id="category"  >
         <option value="" disabled selected>Catégorie*</option>
-        <option *ngFor="let item of listCategory" [value]="item">
+        <option *ngFor="let item of categories" [value]="item? item : 'prout'">
           {{ item || "Sans catégorie"}}
         </option>
 
