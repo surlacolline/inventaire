@@ -1,0 +1,38 @@
+<h2>Ajout d'un objet</h2>
+<div >
+  <form  [formGroup]="addNewItem" (ngSubmit)="onSubmit()">
+    <div >
+      <input type="text" formControlName="title" />
+      <label for="title">Titre*</label>
+    </div>
+
+    <div >
+      <input type="text"  formControlName="content" />
+      <label for="content">Contenu*</label>
+
+    </div>
+
+    <div>
+      <input list="category" type="text"  formControlName="category" placeholder="Catégorie"/>
+      <datalist id="category"  >
+        <option value="" disabled selected>Catégorie*</option>
+          <option *ngFor="let item of categories" [value]="item? item : 'prout'">
+          {{ item || "Sans catégorie"}}
+        </option>
+
+      </datalist>
+
+      <!-- <label for="category">Catégorie*</label> -->
+    </div>
+    <br />
+
+    <button
+      class="waves-effect waves-light btn cyan lighten-3 black-text"
+      id="btnForm"
+      type="submit"
+      [disabled]="addNewItem.invalid"
+    >
+      Ajouter un objet
+    </button>
+  </form>
+</div>

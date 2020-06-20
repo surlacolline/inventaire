@@ -1,0 +1,16 @@
+<h2>Mes objets</h2>
+<div >
+  <select class="form-control">
+    <option *ngFor="let item of categories">
+        {{ item || "Sans catégorie"}}
+    </option>
+  </select>
+</div>
+<div class="list-items">
+  <div class="item" *ngFor="let object of objects">
+    <app-post-list-item
+      [object]="object"
+      (messageEmitterDelete)="onSendMessage()"></app-post-list-item>
+  </div>
+</div>
+
