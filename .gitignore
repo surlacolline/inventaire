@@ -3,7 +3,7 @@
 **/*.cache
 API/bin/
 API/obj/
-
+API/.vs/
 # compiled output
 /Front/dist
 /Front/tmp
