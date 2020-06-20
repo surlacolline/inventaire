@@ -1,4 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
+#API C#
+**/*.cache
+API/bin/
+API/obj/
 
 # compiled output
 /Front/dist
@@ -45,5 +49,4 @@ testem.log
 .DS_Store
 Thumbs.db
 
-#API C#
-**/*.cache
+
