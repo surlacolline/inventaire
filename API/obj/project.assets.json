@@ -11799,11 +11799,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Elise\\Documents\\DEV\\1- Projets\\Inventaire\\inventaire\\API\\webapi.csproj",
+      "projectUniqueName": "C:\\Users\\Elise\\Documents\\DEV\\1- Projets\\Inventaire\\API\\webapi.csproj",
       "projectName": "webapi",
-      "projectPath": "C:\\Users\\Elise\\Documents\\DEV\\1- Projets\\Inventaire\\inventaire\\API\\webapi.csproj",
+      "projectPath": "C:\\Users\\Elise\\Documents\\DEV\\1- Projets\\Inventaire\\API\\webapi.csproj",
       "packagesPath": "C:\\Users\\Elise\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Elise\\Documents\\DEV\\1- Projets\\Inventaire\\inventaire\\API\\obj\\",
+      "outputPath": "C:\\Users\\Elise\\Documents\\DEV\\1- Projets\\Inventaire\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -11821,6 +11821,7 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
           "projectReferences": {}
         }
       },
@@ -11832,6 +11833,7 @@
     },
     "frameworks": {
       "netcoreapp2.1": {
+        "targetAlias": "netcoreapp2.1",
         "dependencies": {
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
@@ -11861,7 +11863,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.8.20417.9\\RuntimeIdentifierGraph.json"
       }
     }
   }
