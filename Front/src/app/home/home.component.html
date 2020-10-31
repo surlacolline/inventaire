@@ -1,10 +1,11 @@
-<section class = "form-items"><div app-form-post [categories] = "listCategory" (messageEmitter)="onSendMessage()"></div></section>
+<section class="form-items">
+  <div app-form-post [categories]="listCategory" (messageEmitter)="onSendMessage()"></div>
+</section>
 
 <!--<a [routerLink]="['blog/add']">Ajouter un post</a><br/>-->
 
 <div>
-
-  <section > <app-post-list [objects]="objects"    (messageEmitterDelete)="onSendMessage()"></app-post-list></section>
-
-
- </div>
+  <section>
+    <app-post-list [objects]="objects" (messageEmitterDelete)="onSendMessage()"></app-post-list>
+  </section>
+</div>

@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavLateralComponent } from './nav-lateral/nav-lateral.component';
 import { SidebarModule } from 'ng-sidebar';
 
 
 
 @NgModule({
-  declarations: [NavLateralComponent],
+  declarations: [],
   imports: [
     CommonModule,
     SidebarModule
   ],
-  exports: [NavLateralComponent]
+  exports: []
 })
 export class SharedModuleModule { }

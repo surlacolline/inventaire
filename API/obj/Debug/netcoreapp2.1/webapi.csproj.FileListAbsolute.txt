@@ -72,3 +72,21 @@ C:\Users\Elise\Documents\DEV\1- Projets\Inventaire\inventaire\API\obj\Debug\netc
 C:\Users\Elise\Documents\DEV\1- Projets\Inventaire\inventaire\API\obj\Debug\netcoreapp2.1\webapi.dll
 C:\Users\Elise\Documents\DEV\1- Projets\Inventaire\inventaire\API\obj\Debug\netcoreapp2.1\webapi.pdb
 C:\Users\Elise\Documents\DEV\1- Projets\Inventaire\inventaire\API\obj\Debug\netcoreapp2.1\webapi.genruntimeconfig.cache
+C:\Users\EliseJuif\perso\inventaire\API\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\EliseJuif\perso\inventaire\API\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\EliseJuif\perso\inventaire\API\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\EliseJuif\perso\inventaire\API\bin\Debug\netcoreapp2.1\webapi.deps.json
+C:\Users\EliseJuif\perso\inventaire\API\bin\Debug\netcoreapp2.1\webapi.runtimeconfig.json
+C:\Users\EliseJuif\perso\inventaire\API\bin\Debug\netcoreapp2.1\webapi.runtimeconfig.dev.json
+C:\Users\EliseJuif\perso\inventaire\API\bin\Debug\netcoreapp2.1\webapi.dll
+C:\Users\EliseJuif\perso\inventaire\API\bin\Debug\netcoreapp2.1\webapi.pdb
+C:\Users\EliseJuif\perso\inventaire\API\obj\Debug\netcoreapp2.1\webapi.csprojAssemblyReference.cache
+C:\Users\EliseJuif\perso\inventaire\API\obj\Debug\netcoreapp2.1\webapi.AssemblyInfoInputs.cache
+C:\Users\EliseJuif\perso\inventaire\API\obj\Debug\netcoreapp2.1\webapi.AssemblyInfo.cs
+C:\Users\EliseJuif\perso\inventaire\API\obj\Debug\netcoreapp2.1\webapi.csproj.CoreCompileInputs.cache
+C:\Users\EliseJuif\perso\inventaire\API\obj\Debug\netcoreapp2.1\webapi.RazorAssemblyInfo.cache
+C:\Users\EliseJuif\perso\inventaire\API\obj\Debug\netcoreapp2.1\webapi.RazorAssemblyInfo.cs
+C:\Users\EliseJuif\perso\inventaire\API\obj\Debug\netcoreapp2.1\webapi.RazorTargetAssemblyInfo.cache
+C:\Users\EliseJuif\perso\inventaire\API\obj\Debug\netcoreapp2.1\webapi.dll
+C:\Users\EliseJuif\perso\inventaire\API\obj\Debug\netcoreapp2.1\webapi.pdb
+C:\Users\EliseJuif\perso\inventaire\API\obj\Debug\netcoreapp2.1\webapi.genruntimeconfig.cache

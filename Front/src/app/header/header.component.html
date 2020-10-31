@@ -1,9 +1,21 @@
-<nav class="navbar   " >
-  <a [routerLink]="['']"><h1>Everything I Own</h1></a>
-  <a [routerLink]="['/subscribe']" [hidden] = 'connected' >Inscription</a>
-<a [routerLink]="['/login']" [hidden] = 'connected'>Connexion</a>
-<a (click)="logout()" [hidden] = '!connected' href="">Deconnexion</a>
+<nav class="navbar">
+  <a [routerLink]="['']">
+    <h1>Everything I Own</h1>
+  </a>
+  <div>
+    <ng-container *ngIf="connected; then thenBlock else elseBlock"></ng-container>
+    <ng-template #thenBlock>
+      <a (click)="logout()" href="">Deconnexion</a>
+    </ng-template>
+    <ng-template #elseBlock>
+      <a class="p-1" [routerLink]="['/subscribe']">Inscription</a>
+      <a class="p-1" [routerLink]="['/login']">Connexion</a>
+    </ng-template>
+  </div>
+
+
+
+
 
 
 </nav>
-
